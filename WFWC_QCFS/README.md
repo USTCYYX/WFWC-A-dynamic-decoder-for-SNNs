@@ -8,4 +8,4 @@ python WFWC_QCFS.py --model=vgg16 --data=cifar10 --id=cifar10-vgg16-example --t=
 
 python WFWC_QCFS.py --model=vgg16 --data=cifar100 --id=cifar100-vgg16-l8-example --t=30 --device=cuda:2 --l=8 --c=6 --r=0.51
 
-
+python WFWC.py --model=vgg16 --data=imagenet --id=ImageNet-VGG16-t16 --t=74 --device=cuda:0 --l=16 --c=11 --r=0.55
