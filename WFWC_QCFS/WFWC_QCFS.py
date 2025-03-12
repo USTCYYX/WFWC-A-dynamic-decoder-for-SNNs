@@ -78,8 +78,6 @@ if __name__ == "__main__":
     parser.add_argument('--r', default=0.5, type=float, help='r')
     args = parser.parse_args()
     
-    seed_all()
-
     # only ImageNet using multiprocessing,
     if args.gpus > 1:
         if args.data.lower() != 'imagenet':
@@ -102,5 +100,5 @@ if __name__ == "__main__":
         model.load_state_dict(state_dict)
         model = replace_activation_by_neuron(model)
         model.to(args.device)
-        acc = WFWC(test, model, args.device, args.t, args.c, args.r)
+        WFWC(test, model, args.device, args.t, args.c, args.r)
 
